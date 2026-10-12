@@ -4,7 +4,7 @@ Aplicativo Expo/React Native para contar ciclos completos de exercícios em víd
 
 ## 1. Problema e recorte
 
-Conferir repetições em vídeos é trabalhoso e depende de observar o movimento completo. O RepCounter estima pontos corporais, calcula ângulos e identifica ciclos de flexão/retorno. Rosca, agachamento, flexão e supinos estão disponíveis; a avaliação pública descrita abaixo cobre os três primeiros. A classificação angular não certifica execução correta, segurança ou adequação clínica.
+O público-alvo são praticantes e profissionais que desejam conferir ciclos de movimento em vídeos, como apoio à observação. Conferir repetições em vídeos é trabalhoso e depende de observar o movimento completo. O RepCounter estima pontos corporais, calcula ângulos e identifica ciclos de flexão/retorno. Rosca, agachamento, flexão e supinos estão disponíveis; a avaliação pública descrita abaixo cobre os três primeiros. A classificação angular não certifica execução correta, segurança ou adequação clínica.
 
 ## 2. Preparação e execução
 
@@ -107,6 +107,10 @@ O SDK MediaPipe pode tentar telemetria; os cenários protegidos bloquearam as te
 Cinco revisores por agentes examinaram runtime/rede, dados e histórico, dependências, entradas/arquivos e privacidade/requisitos. A revisão considerou categorias OWASP pertinentes e encontrou riscos residuais: ferramentas npm com avisos sem correção disponíveis na auditoria de 10/10/2026; dependência da CSP na Web; provedores de documentos externos; limites de memória por resolução e retenção temporária de blobs ao trocar vídeos. Não é pentest, certificação OWASP ou garantia de ausência de vulnerabilidades. Não houve captura de pacotes nem fuzzing de decodificadores. Avisos de ferramentas não foram encontrados nas inspeções anteriores dos bundles distribuídos; o risco de desenvolvimento permanece.
 
 Instalação limpa validada: `npm ci` concluiu, **191 testes em 19 suítes** passaram e `tsc --noEmit` passou. Os testes que exigiam gravações reais foram excluídos da publicação. O export Web estático também concluiu com sucesso.
+
+### Vieses e alcance da avaliação
+
+A amostra pequena de conveniência não permite comparar desempenho por idade, tom de pele, composição corporal, deficiência ou experiência de treino. Iluminação, roupa, oclusões, posição da câmera e articulações fora do quadro podem alterar a leitura. Não foi medida a magnitude desses efeitos por subgrupo; ampliar a diversidade e testar gravações independentes são necessários antes de generalizar os resultados.
 
 ## 7. Conclusão
 
