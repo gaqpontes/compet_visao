@@ -1,0 +1,15 @@
+gradle.projectsEvaluated {
+  def app = gradle.rootProject.findProject(':app')
+  if (app == null) return
+  app.tasks.register('securityDependencyReport') {
+    doLast {
+      def entries = app.configurations.releaseRuntimeClasspath.incoming.resolutionResult.allComponents.findAll { it.id instanceof org.gradle.api.artifacts.component.ModuleComponentIdentifier }.collect {
+        [group: it.id.group, name: it.id.module, version: it.id.version]
+      }.unique().sort { a, b -> (a.group + ':' + a.name) <=> (b.group + ':' + b.name) }
+      def output = new File(gradle.rootProject.rootDir.parentFile, 'docs/seguranca/android-dependencies.json')
+      output.parentFile.mkdirs()
+      output.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(entries))
+      println 'Security runtime dependencies: ' + entries.size()
+    }
+  }
+}

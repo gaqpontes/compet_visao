@@ -1,0 +1,12 @@
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/android/
+mobile/ios/
+*.apk
+*.mp4
+*.ipynb
+.env
+.env.*
+*.key
+*.jks

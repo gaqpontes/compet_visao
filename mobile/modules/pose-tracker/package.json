@@ -1,0 +1,7 @@
+{
+  "name": "pose-tracker",
+  "version": "1.0.0",
+  "description": "MediaPipe Pose and Hand tracker for Expo",
+  "main": "index.ts",
+  "types": "index.ts"
+}

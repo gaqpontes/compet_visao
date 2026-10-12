@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android", "web"],
+  "ios": {
+    "modules": ["PoseTrackerModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.posetracker.PoseTrackerModule"]
+  }
+}
